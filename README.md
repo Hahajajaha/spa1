@@ -1,2 +1,1 @@
-# spa1
-SPA
+# WorldCitiesApi
