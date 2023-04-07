@@ -16,6 +16,9 @@ import {MatButtonModule} from '@angular/material/button';
 import { HttpClientModule } from '@angular/common/http';
 import { TeamsComponent } from './teams/teams.component';
 import { GroupsComponent } from './groups/groups.component';
+import { CategoryComponent } from './category/category.component';
+import { ModelComponent } from './model/model.component';
+import { ProductComponent } from './product/product.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { GroupsComponent } from './groups/groups.component';
     CounterComponent,
     FetchDataComponent,
     TeamsComponent,
-    GroupsComponent
+    GroupsComponent,
+    CategoryComponent,
+    ModelComponent,
+    ProductComponent
   ],
   imports: [
     BrowserModule,

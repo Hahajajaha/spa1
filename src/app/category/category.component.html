@@ -1,0 +1,21 @@
+<p>category works!</p>
+<p *ngIf="!category"><em>Loading...</em></p >
+
+    <table class='table table-striped' aria-labelledby="tableLabel">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Origin_Region</th>
+          <th>Material</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ category.id }}</td>
+          <td>{{ category.name }}</td>
+          <td>{{ category.origin_Region }}</td>
+          <td>{{ category.material }}</td>
+        </tr>
+      </tbody>
+    </table>

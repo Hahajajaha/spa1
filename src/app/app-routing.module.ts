@@ -5,6 +5,9 @@ import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { GroupsComponent } from './groups/groups.component';
 import { HomeComponent } from './home/home.component';
 import { TeamsComponent } from './teams/teams.component';
+import { CategoryComponent } from './category/category.component';
+import { ModelComponent } from './model/model.component';
+import { ProductComponent } from './product/product.component';
 
 
 
@@ -13,7 +16,10 @@ const routes: Routes = [
   { path: 'counter', component: CounterComponent },
   { path: 'fetch-data', component: FetchDataComponent },
   { path: 'teams', component: TeamsComponent},
-  { path: 'groups', component: GroupsComponent}
+  { path: 'groups', component: GroupsComponent},
+  { path: 'category', component: CategoryComponent},
+  { path: 'model', component: ModelComponent},
+  { path: 'product', component: ProductComponent},
 ];
 
 @NgModule({

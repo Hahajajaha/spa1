@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 })
 export class FetchDataComponent {
   public forecasts: WeatherForecast[] = [];
-  baseUrl = 'https://localhost:7134/'
+  baseUrl = 'https://localhost:7104/api/'
 
   constructor(http: HttpClient){  /* it equals to: Animal cat = new Animal to build a new class */
-    http.get<WeatherForecast[]>(this.baseUrl + 'WeatherForecast').subscribe(result => {
+    http.get<WeatherForecast[]>(this.baseUrl + 'Categories/3').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
   }
