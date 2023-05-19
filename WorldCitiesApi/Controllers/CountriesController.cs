@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Components.Routing;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using WorldCitiesApi.Dtos;
 using WorldModel;
 
 namespace WorldCitiesApi.Controllers
@@ -21,6 +23,7 @@ namespace WorldCitiesApi.Controllers
         [Authorize]
         public async Task<ActionResult<IEnumerable<Country>>> GetCountries()
         {
+            
             return await _context.Countries.ToListAsync();
         }
 
@@ -29,8 +32,30 @@ namespace WorldCitiesApi.Controllers
         public async Task<ActionResult<Country>> GetCountry(int id)
         {
             Country? country = await _context.Countries.FindAsync(id);
-            return country == null ? NotFound() : country;
+            return country is null ? NotFound() : country;
         }
+
+        [HttpGet("Population/{id}")]
+        public async Task<ActionResult<CountryPopulation>> GetCountryPopulation(int id)
+        {
+            CountryPopulation? countryPopulation = await _context.Countries.Where(c => c.Id == id).Select(c => new CountryPopulation
+            {
+                Id = c.Id,
+                Name = c.Name,
+                Population = c.Cities.Sum(t => t.Population),
+                Cities = c.Cities
+
+            }).SingleOrDefaultAsync();
+            if (countryPopulation is null)
+            {
+                return NotFound();
+            }
+
+            return countryPopulation;
+        }
+            // Country? country = await _context.Countries.FindAsync(id);
+            // return country == null ? NotFound() : country;
+        
 
         // PUT: api/Countries/5
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
@@ -91,3 +116,4 @@ namespace WorldCitiesApi.Controllers
         private bool CountryExists(int id) => _context.Countries.Any(e => e.Id == id);
     }
 }
+

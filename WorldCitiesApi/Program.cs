@@ -19,12 +19,12 @@ builder.Services.AddSwaggerGen(c =>
     {
         Contact = new OpenApiContact
         {
-            Email = "tljx10@gmail.com",
-            Name = "Felix Rabinovich",
+            Email = "tljx10@gmail.com", //changed
+            Name = "Hexuan Wang", //changed
             Url = new Uri("https://canvas.csun.edu/courses/128137")
         },
-        Description = "APIs for World Cities",
-        Title = "World Cities APIs",
+        Description = "APIs for Porcelain Collections", //changed
+        Title = "Porcelain Collections APIs", //changed
         Version = "V1"
     });
     OpenApiSecurityScheme jwtSecurityScheme = new()

@@ -15,5 +15,5 @@ public partial class Model
     public int CategoryId { get; set; }
 
     public virtual ICollection<Product> Products { get; } = new List<Product>();
-    public virtual Category Category { get; set; } = null!;
+   /* public virtual Category Category { get; set; } = null!;*/
 }

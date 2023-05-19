@@ -20,5 +20,5 @@ public partial class Product
     public string Purchase_Place { get; set; } = null!;
     public int ModelId { get; set; }
 
-    public virtual Model Model { get; set; } = null!;
+/*    public virtual Model Model { get; set; } = null!;*/
 }
