@@ -1,0 +1,35 @@
+<div class="model-add">
+    <h1>Add a Model</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <mat-form-field>
+        <mat-label>Name:</mat-label>
+        <input matInput formControlName="name" placeholder="Type a name">
+      </mat-form-field>
+      <!-- Origin_Region -->
+      <mat-form-field>
+        <mat-label>Usage:</mat-label>
+        <input matInput formControlName="usage" placeholder="Insert the usage">
+      </mat-form-field>
+      <!-- Material -->
+      <!-- <mat-form-field>
+        <mat-label>CategoryId:</mat-label>
+        <input matInput formControlName="categoryId" placeholder="Insert the categoryId">
+      </mat-form-field> -->
+      <mat-form-field>
+        <mat-label>CategoryId:</mat-label>
+        <mat-select formControlName="categoryId">
+          <mat-option matInput *ngFor="let category of categories" value="{{category.id}}">{{category.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+
+      <div>
+        <button mat-flat-button color="primary" type="submit">Save
+        </button>
+        <button mat-flat-button color="secondary" [routerLink]="['/model']">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+  

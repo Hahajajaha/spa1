@@ -1,1 +1,32 @@
-<p>product works!</p>
+<h1>Products of Hexuan's Porcelain Collections</h1>
+<p>Here's a list of products: feel free to check its details.</p>
+<p *ngIf="showAdmin"><a [routerLink]="['/productadd']">Add a Product</a></p>
+<p *ngIf="!products"><em>Loading...</em></p >
+
+    <table class='table table-striped' aria-labelledby="tableLabel">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Puchase_Place</th>
+          <th>ModelId</th>
+          <th>Color</th>
+          <th *ngIf="showAdmin">Edit</th>
+          <th *ngIf="showAdmin">Delete</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products">
+          <td>{{ product.id }}</td>
+          <td>{{ product.name }}</td>
+          <td>{{ product.price }}</td>
+          <td>{{ product.purchase_Place }}</td>
+          <td>{{ product.modelId }}</td>
+          <td>{{ product.color }}</td>
+          <td *ngIf="showAdmin"><a [routerLink]="['/productedit', product.id]">Edit</a></td>
+          <td *ngIf="showAdmin"><a [routerLink]="['/productdelete', product.id]">Delete</a></td>
+        </tr>
+      </tbody>
+    </table>
+

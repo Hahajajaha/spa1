@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { environment } from '../environment/environment';
 
 @Component({
   selector: 'app-fetch-data',
@@ -8,18 +9,17 @@ import { Component } from '@angular/core';
 })
 export class FetchDataComponent {
   public forecasts: WeatherForecast[] = [];
-  baseUrl = 'https://localhost:7104/api/'
 
-  constructor(http: HttpClient){  /* it equals to: Animal cat = new Animal to build a new class */
-    http.get<WeatherForecast[]>(this.baseUrl + 'Categories/3').subscribe(result => {
+  constructor(http: HttpClient) {
+            http.get<WeatherForecast[]>(environment.baseUrl + 'weatherforecast').subscribe(result => {
       this.forecasts = result;
     }, error => console.error(error));
   }
 }
 
-  interface WeatherForecast {
-    date: string;
-    temperatureC: number;
-    temperatureF: number;
-    summary: string;
+interface WeatherForecast {
+  date: string;
+  temperatureC: number;
+  temperatureF: number;
+  summary: string;
 }

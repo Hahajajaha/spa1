@@ -1,0 +1,29 @@
+<div class="model-edit">
+    <h1>Edit - {{model?.id}}</h1>
+    <!-- <p *ngIf="this.id && !category"><em>Loading...</em></p> -->
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <mat-form-field>
+        <mat-label>Name:</mat-label>
+        <input matInput formControlName="name" placeholder="Type a name">
+      </mat-form-field>
+      <!-- Origin_Region -->
+      <mat-form-field>
+        <mat-label>Usage:</mat-label>
+        <input matInput formControlName="usage" placeholder="Insert the usage">
+      </mat-form-field>
+      <!-- Material -->
+      <!-- <mat-form-field>
+        <mat-label>CategoryId:</mat-label>
+        <input matInput formControlName="categoryId" placeholder="Insert the categoryId">
+      </mat-form-field> -->
+      <div>
+        <button mat-flat-button color="primary" type="submit">Save
+        </button>
+        <button mat-flat-button color="secondary" [routerLink]="['/model']">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+  

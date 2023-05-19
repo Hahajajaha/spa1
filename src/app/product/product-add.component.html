@@ -1,0 +1,41 @@
+<div class="product-add">
+    <h1>Add a Product</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <mat-form-field>
+        <mat-label>Name:</mat-label>
+        <input matInput formControlName="name" placeholder="Type a name">
+      </mat-form-field>
+      <!-- Price -->
+      <mat-form-field>
+        <mat-label>Price:</mat-label>
+        <input matInput formControlName="price" placeholder="Insert the price">
+      </mat-form-field>
+      <!-- Purchase_Place -->
+      <mat-form-field>
+        <mat-label>Purchase_Place:</mat-label>
+        <input matInput formControlName="purchase_Place" placeholder="Insert the purchase_Place">
+      </mat-form-field>
+      <!-- ModelId -->
+      <mat-form-field>
+        <mat-label>ModelId:</mat-label>
+        <mat-select formControlName="modelId">
+          <mat-option matInput *ngFor="let model of models" value="{{model.id}}">{{model.name}}</mat-option>
+        </mat-select>
+    </mat-form-field>
+      <!-- Color -->
+      <mat-form-field>
+        <mat-label>Color:</mat-label>
+        <input matInput formControlName="color" placeholder="Insert the color">
+      </mat-form-field>
+
+      <div>
+        <button mat-flat-button color="primary" type="submit">Save
+        </button>
+        <button mat-flat-button color="secondary" [routerLink]="['/product']">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+  

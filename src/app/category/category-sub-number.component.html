@@ -1,0 +1,22 @@
+<h1>The following table demonstartes how many models are there under the current category.</h1>
+<h1><a  [routerLink]="['/category']">Back</a></h1>
+<table class='table table-striped' aria-labelledby="tableLabel" [hidden]="!categoryDto" border="1" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Origin_Region</th>
+        <th>Material</th>
+        <th>ModelCount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{ categoryDto.id}}</td>
+        <td>{{ categoryDto.name}}</td>
+        <td>{{ categoryDto.origin_Region}}</td>
+        <td>{{ categoryDto.material }}</td>
+        <td>{{ categoryDto.modelCount }}</td>
+      </tr>
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\bin\Debug\net7.0\WorldModel.deps.json
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\bin\Debug\net7.0\WorldModel.runtimeconfig.json
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\bin\Debug\net7.0\WorldModel.dll
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\bin\Debug\net7.0\WorldModel.pdb
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.csproj.AssemblyReference.cache
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.AssemblyInfoInputs.cache
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.AssemblyInfo.cs
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.csproj.CoreCompileInputs.cache
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.dll
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\refint\WorldModel.dll
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.pdb
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\WorldModel.genruntimeconfig.cache
+C:\Users\Hexuan\Downloads\spa1-server\WorldModel\obj\Debug\net7.0\ref\WorldModel.dll

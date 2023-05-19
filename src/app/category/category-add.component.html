@@ -1,0 +1,31 @@
+ <div class="category-add">
+    <h1>Add a Category</h1>
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <!-- Name -->
+      <mat-form-field>
+        <mat-label>Name:</mat-label>
+        <input matInput formControlName="name" placeholder="Type a name">
+      </mat-form-field>
+      &nbsp;
+      <!-- Origin_Region -->
+      <mat-form-field>
+        <mat-label>Origin_Region:</mat-label>
+        <input matInput formControlName="origin_Region" placeholder="Insert the origin_Region">
+      </mat-form-field>
+      &nbsp;
+      <!-- Material -->
+      <mat-form-field>
+        <mat-label>Material:</mat-label>
+        <input matInput formControlName="material" placeholder="Insert the material">
+      </mat-form-field>
+      &nbsp;
+      <div>
+        <button mat-flat-button color="primary" type="submit">Save
+        </button>
+        <button mat-flat-button color="secondary" [routerLink]="['/category']">
+          Cancel
+        </button>
+      </div>
+    </form>
+  </div>
+  

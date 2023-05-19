@@ -1,5 +1,7 @@
-<p>category works!</p>
-<p *ngIf="!category"><em>Loading...</em></p >
+<h1>Categories of Hexuan's Porcelain Collections</h1>
+<p>Here's a list of categories: feel free to check its details.</p>
+<p *ngIf="showAdmin"><a [routerLink]="['/categoryadd']">Add a Category</a></p>
+<p *ngIf="!categories"><em>Loading...</em></p >
 
     <table class='table table-striped' aria-labelledby="tableLabel">
       <thead>
@@ -8,14 +10,33 @@
           <th>Name</th>
           <th>Origin_Region</th>
           <th>Material</th>
+          <th *ngIf="showAdmin">Edit</th>
+          <th *ngIf="showAdmin">Delete</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{ category.id }}</td>
+        <tr *ngFor="let category of categories">
+          <td><a [routerLink]="['/categorysubnumber', category.id]">{{ category.id }}</a></td>
           <td>{{ category.name }}</td>
           <td>{{ category.origin_Region }}</td>
           <td>{{ category.material }}</td>
+          <!-- <td><a [routerLink]="['/countrypopulation', country.id]">{{country.id}}</a></td> -->
+          <td *ngIf="showAdmin"><a [routerLink]="['/categoryedit', category.id]">Edit</a></td>
+          <td *ngIf="showAdmin"><a [routerLink]="['/categorydelete', category.id]">Delete</a></td>
+          
         </tr>
       </tbody>
     </table>
+
+
+
+    <!-- <tbody>
+      <tr *ngFor="let country of countries">
+        <td><a [routerLink]="['/countrypopulation', country.id]">{{country.id}}</a></td>
+        <td><a [routerLink]="['/countryedit', country.id]">{{ country.name }}</a></td>
+        <td>{{ country.iso2 }}</td>
+        <td>{{ country.iso3 }}</td>
+        <td><a [routerLink]="['/countrydelete', country.id]">Delete</a></td>
+  
+      </tr>
+    </tbody> -->
